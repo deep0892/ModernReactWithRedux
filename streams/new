@@ -1,0 +1,6 @@
+Client ID: 483363804598-rgckpb22jlq52cvh58rr5glks5a0bl3q.apps.googleusercontent.com
+
+
+"Not a valid origin for the client: http://localhost:3000 has not been whitelisted for 
+client ID 483363804598-rgckpb22jlq52cvh58rr5glks5a0bl3q.apps.googleusercontent.com. 
+Please go to https://console.developers.google.com/ and whitelist this origin for your project's client ID."
