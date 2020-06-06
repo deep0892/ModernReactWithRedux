@@ -1,28 +1,30 @@
-import React, { Component } from "react";
-import { Field, reduxForm } from "redux-form";
+import React, { Component } from 'react';
+import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { createStreams } from '../../actions';
 
 class StreamCreate extends Component {
   renderError({ error, touched }) {
     if (touched && error) {
       return (
         <div className="ui error message">
-          <div className="header">{error}</div>
+          <div className="header"> {error} </div>
         </div>
       );
     }
   }
   renderInput = ({ input, label, meta }) => {
-    const className = `field ${meta.error && meta.touched ? "error" : ""}`;
+    const className = `field ${meta.error && meta.touched ? 'error' : ''}`;
     return (
       <div className={className}>
-        <label>{label}</label>
-        <input {...input} />
-        {this.renderError(meta)}
+        <label> {label} </label> <input {...input} /> {this.renderError(meta)}
       </div>
     );
   };
 
-  onSubmit(formValues) {}
+  onSubmit = (formValues) => {
+    this.props.createStreams(formValues);
+  };
 
   render() {
     return (
@@ -41,7 +43,7 @@ class StreamCreate extends Component {
             component={this.renderInput}
             label="Enter description"
           />
-          <button className="ui button primary">Submit </button>
+          <button className="ui button primary"> Submit </button>
         </form>
       </div>
     );
@@ -52,15 +54,18 @@ const validate = (formValues) => {
   const errors = {};
 
   if (!formValues.title) {
-    errors.title = "You must enter a title";
+    errors.title = 'You must enter a title';
   }
   if (!formValues.description) {
-    errors.description = "You must enter a description";
+    errors.description = 'You must enter a description';
   }
   return errors;
 };
 
-export default reduxForm({
-  form: "streamCreate",
+const formWrapped = reduxForm({
+  form: 'streamCreate',
   validate,
 })(StreamCreate);
+export default connect(null, {
+  createStreams,
+})(formWrapped);
