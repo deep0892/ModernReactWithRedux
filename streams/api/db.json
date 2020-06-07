@@ -1,41 +1,32 @@
 {
-  "streams": [
-    {
-      "title": "test title",
-      "description": "this is test description",
-      "id": 1
-    },
-    {
-      "title": "test title",
-      "description": "this is test description",
-      "id": 2
-    },
-    {
-      "title": "kjbdjf fjkds ",
-      "description": "jnew bdmfbkjd fdsjk dsj vcjkds vds",
-      "id": 3
-    },
-    {
-      "title": "dbfjhds ",
-      "description": "jkdsjkadfsg fsd gsdfgdf",
-      "id": 4
-    },
-    {
-      "title": "fjk vfds kfd s vjkfds v",
-      "description": "fsjkcv kfds jk kjsdf vjk dscv sd cv sfd ckjv ds",
-      "id": 5
-    },
-    {
-      "title": "kjsf vsd v kjsd vksd",
-      "description": "kj vdsjk jkv skjv sd jkv sdjk vjks dv sdfjv sdfj vjksdf jkv ejfds vjef dsjv jef sdvjk fesdjkv djks",
-      "userId": "100281277121515387388",
-      "id": 6
-    },
-    {
-      "title": "sdfj ksjd ",
-      "description": "kj kjeds vjds kv",
-      "userId": "100281277121515387388",
-      "id": 7
-    }
-  ]
+    "streams": [{
+            "title": "First Stream",
+            "description": "dsfsd fsdfsdf sdf sd f sd f sda",
+            "id": 3
+        },
+        {
+            "title": "Second Stream",
+            "description": "jkdsjkadfsg fsd gsdfgdf",
+            "id": 4,
+            "userId": "100281277121515387388"
+        },
+        {
+            "title": "Third Stream",
+            "description": "fsjkcv kfds jk kjsdf vjk dscv sd cv sfd ckjv ds",
+            "id": 5,
+            "userId": "100281277121515387388"
+        },
+        {
+            "title": "Fourth Stream",
+            "description": "kj vdsjk jkv skjv sd jkv sdjk vjks dv sdfjv sdfj vjksdf jkv ejfds vjef dsjv jef sdvjk fesdjkv djks",
+            "userId": "100281277121515387388",
+            "id": 6
+        },
+        {
+            "title": "Fifth Stream",
+            "description": "kj kjeds vjds kv",
+            "userId": "100281277121515387388",
+            "id": 7
+        }
+    ]
 }
