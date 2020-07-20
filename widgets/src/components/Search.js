@@ -18,8 +18,29 @@ const Search = () => {
       });
       setResult(data.query.search);
     };
-    search();
+    if (term) {
+      search();
+    }
   }, [term]);
+
+  const renderedResults = result.map((item) => {
+    return (
+      <div className="item" key={item.pageid}>
+        <div className="right floated content">
+          <a
+            href={`https://en.wikipedia.org?curid=${item.pageid}`}
+            className="ui button"
+          >
+            Go
+          </a>
+        </div>
+        <div className="content">
+          <div className="header">{item.title}</div>
+          {item.snippet}
+        </div>
+      </div>
+    );
+  });
 
   return (
     <div>
@@ -36,6 +57,7 @@ const Search = () => {
           />
         </div>
       </div>
+      <div className="ui celled list">{renderedResults}</div>
     </div>
   );
 };
